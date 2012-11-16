@@ -5,7 +5,7 @@ Plugin Name: Popup
 Plugin URI: http://www.gopiplus.com/work/2011/01/14/wordpress-popup/
 Description: One easy way to send your visitors a welcome message, notice or advertisement is to add this popup plugin to your site. 
 Author: Gopi.R
-Version: 9.0
+Version: 10.0
 Author URI: http://www.gopiplus.com/work/2011/01/14/wordpress-popup/
 Donate link: http://www.gopiplus.com/work/2011/01/14/wordpress-popup/
 License: GPLv2 or later
@@ -246,49 +246,49 @@ function PPOPOUPUP_admin_options()
 	
 	echo '<p>Random message	:<br />	<input  style="width: 100px;" type="text" value="';
 	echo $PPOPOUPUP_RANDOM . '" name="PPOPOUPUP_RANDOM" id="PPOPOUPUP_RANDOM" /> ( YES / NO ) </p>';
-	
+	echo '<br />';
 	echo '<p>Popup IMG1 txt	:<br /> <input  style="width: 500px;" type="text" value="';
 	echo $PPOPOUPUP_IMG1 . '" name="PPOPOUPUP_IMG1" id="PPOPOUPUP_IMG1" /> (IMG1)</p>';
 	echo '<p>Popup IMG1 url :<br /> <input  style="width: 600px;" type="text" value="';
 	echo $PPOPOUPUP_URL1 . '" name="PPOPOUPUP_URL1" id="PPOPOUPUP_URL1" /> </p>';
 	echo '<p>Popup IMG1 Link (Page will redirect to this URL on image click) :<br /> <input  style="width: 600px;" type="text" value="';
 	echo $PPOPOUPUP_LINK1 . '" name="PPOPOUPUP_LINK1" id="PPOPOUPUP_LINK1" /> </p>';
-	
+	echo '<br />';
 	echo '<p>Popup IMG2 txt :<br /> <input  style="width: 500px;" type="text" value="';
 	echo $PPOPOUPUP_IMG2 . '" name="PPOPOUPUP_IMG2" id="PPOPOUPUP_IMG2" /> (IMG2)</p>';
 	echo '<p>Popup IMG2 url :<br /> <input  style="width: 600px;" type="text" value="';
 	echo $PPOPOUPUP_URL2 . '" name="PPOPOUPUP_URL2" id="PPOPOUPUP_URL2" /> </p>';
 	echo '<p>Popup IMG2 Link :<br /> <input  style="width: 600px;" type="text" value="';
 	echo $PPOPOUPUP_LINK2 . '" name="PPOPOUPUP_LINK2" id="PPOPOUPUP_LINK2" /> </p>';
-	
+	echo '<br />';
 	echo '<p>Popup IMG3 txt :<br /> <input  style="width: 500px;" type="text" value="';
 	echo $PPOPOUPUP_IMG3 . '" name="PPOPOUPUP_IMG3" id="PPOPOUPUP_IMG3" /> (IMG3)</p>';
 	echo '<p>Popup IMG3 url :<br /> <input  style="width: 600px;" type="text" value="';
 	echo $PPOPOUPUP_URL3 . '" name="PPOPOUPUP_URL3" id="PPOPOUPUP_URL3" /> </p>';
 	echo '<p>Popup IMG3 Link :<br /> <input  style="width: 600px;" type="text" value="';
 	echo $PPOPOUPUP_LINK3 . '" name="PPOPOUPUP_LINK3" id="PPOPOUPUP_LINK3" /> </p>';
-	
+	echo '<br />';
 	echo '<p>Popup IMG4 txt :<br /> <input  style="width: 500px;" type="text" value="';
 	echo $PPOPOUPUP_IMG4 . '" name="PPOPOUPUP_IMG4" id="PPOPOUPUP_IMG4" /> (IMG4)</p>';
 	echo '<p>Popup IMG4 url :<br /> <input  style="width: 600px;" type="text" value="';
 	echo $PPOPOUPUP_URL4 . '" name="PPOPOUPUP_URL4" id="PPOPOUPUP_URL4" /> </p>';
 	echo '<p>Popup IMG4 Link :<br /> <input  style="width: 600px;" type="text" value="';
 	echo $PPOPOUPUP_LINK4 . '" name="PPOPOUPUP_LINK4" id="PPOPOUPUP_LINK4" /> </p>';
-	
+	echo '<br />';
 	echo '<p>Popup IMG5 txt :<br /> <input  style="width: 500px;" type="text" value="';
 	echo $PPOPOUPUP_IMG5 . '" name="PPOPOUPUP_IMG5" id="PPOPOUPUP_IMG5" /> (IMG5)</p>';
 	echo '<p>Popup IMG5 url :<br /> <input  style="width: 600px;" type="text" value="';
 	echo $PPOPOUPUP_URL5 . '" name="PPOPOUPUP_URL5" id="PPOPOUPUP_URL5" /> </p>';
 	echo '<p>Popup IMG5 Link :<br /> <input  style="width: 600px;" type="text" value="';
 	echo $PPOPOUPUP_LINK5 . '" name="PPOPOUPUP_LINK5" id="PPOPOUPUP_LINK5" /> </p>';
-	
+	echo '<br />';
 	echo '<p>Popup IMG6 txt :<br /> <input  style="width: 500px;" type="text" value="';
 	echo $PPOPOUPUP_IMG6 . '" name="PPOPOUPUP_IMG6" id="PPOPOUPUP_IMG6" /> (IMG6)</p>';
 	echo '<p>Popup IMG6 url :<br /> <input  style="width: 600px;" type="text" value="';
 	echo $PPOPOUPUP_URL6 . '" name="PPOPOUPUP_URL6" id="PPOPOUPUP_URL6" /> </p>';
 	echo '<p>Popup IMG6 Link :<br /> <input  style="width: 600px;" type="text" value="';
 	echo $PPOPOUPUP_LINK6 . '" name="PPOPOUPUP_LINK6" id="PPOPOUPUP_LINK6" /> </p>';
-	
+	echo '<br />';
 	echo '<p>Popup session option:<br /> <input  style="width: 100px;" type="text" value="';
 	echo $PPOPOUPUP_SESSION . '" name="PPOPOUPUP_SESSION" id="PPOPOUPUP_SESSION" maxlength="3" /> ( YES / NO ) </p>';
 	
@@ -302,6 +302,11 @@ function PPOPOUPUP_admin_options()
 	
 	?>
 	<br>
+<strong>Plugin configuration option</strong>
+<ol>
+	<li>Option to add the popup into particular pages and posts.</li>
+	<li>Option to add the popup window into all the pages in the website.</li>
+</ol>
   Check official website for more information and live demo <a target="_blank" href='http://www.gopiplus.com/work/2011/01/14/wordpress-popup/'>click here</a>.<br>
   <br>
 </div>
