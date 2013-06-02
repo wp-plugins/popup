@@ -4,9 +4,9 @@ Donate link: http://www.gopiplus.com/work/2011/01/14/wordpress-popup/
 Author URI: http://www.gopiplus.com/work/2011/01/14/wordpress-popup/
 Plugin URI: http://www.gopiplus.com/work/2011/01/14/wordpress-popup/
 Tags: popup, popups, unblockable
-Requires at least: 3.0
-Tested up to: 3.5
-Stable tag: 10.0
+Requires at least: 3.4
+Tested up to: 3.6
+Stable tag: 11.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	
@@ -63,9 +63,15 @@ http://www.gopiplus.com/work/2011/01/14/wordpress-popup/
 == Screenshots ==
 
 1. Front end : http://www.gopiplus.com/work/2011/01/14/wordpress-popup/
+
 2. Admin screen : http://www.gopiplus.com/work/2011/01/14/wordpress-popup/
 
 == Changelog ==
+
+**11.0**
+
+Tested up to 3.6
+Added some security feature.
 
 **10.0**
 
@@ -112,6 +118,11 @@ First version.
 http://www.gopiplus.com/work/2011/01/14/wordpress-popup/
 
 == Upgrade Notice ==
+
+**11.0**
+
+Tested up to 3.6
+Added some security feature.
 
 **10.0**
 
