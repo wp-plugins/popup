@@ -5,8 +5,8 @@ Author URI: http://www.gopiplus.com/work/2011/01/14/wordpress-popup/
 Plugin URI: http://www.gopiplus.com/work/2011/01/14/wordpress-popup/
 Tags: popup, popups, unblockable
 Requires at least: 3.4
-Tested up to: 3.6
-Stable tag: 11.0
+Tested up to: 3.8
+Stable tag: 11.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	
@@ -32,6 +32,7 @@ This popup ads are very effective advertising tools for your website since they 
     * Easy configuration.
     * Unblockable.
 	* Once per session option.
+	* Supports localization
 	
 Detailed information about this plugin and the short code available in this link.	
 http://www.gopiplus.com/work/2011/01/14/wordpress-popup/
@@ -67,6 +68,12 @@ http://www.gopiplus.com/work/2011/01/14/wordpress-popup/
 2. Admin screen : http://www.gopiplus.com/work/2011/01/14/wordpress-popup/
 
 == Changelog ==
+
+**11.1**
+
+1. Tested up to 3.8 (Beta)
+2. Now this plugin supports localization (or internationalization). i.e. option to translate into other languages. 
+Plugin *.po file (popup.po) available in the languages folder. Translators Welcome.
 
 **11.0**
 
@@ -118,6 +125,12 @@ First version.
 http://www.gopiplus.com/work/2011/01/14/wordpress-popup/
 
 == Upgrade Notice ==
+
+**11.1**
+
+1. Tested up to 3.8 (Beta)
+2. Now this plugin supports localization (or internationalization). i.e. option to translate into other languages. 
+Plugin *.po file (popup.po) available in the languages folder. Translators Welcome.
 
 **11.0**
 
