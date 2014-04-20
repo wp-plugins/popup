@@ -3,13 +3,15 @@
 Plugin Name: Popup
 Plugin URI: http://www.gopiplus.com/work/2011/01/14/wordpress-popup/
 Description: One easy way to send your visitors a welcome message, notice or advertisement is to add this popup plugin to your site. 
-Author: Gopi.R
-Version: 11.1
+Author: Gopi Ramasamy
+Version: 11.2
 Author URI: http://www.gopiplus.com/work/2011/01/14/wordpress-popup/
 Donate link: http://www.gopiplus.com/work/2011/01/14/wordpress-popup/
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
+
+if(preg_match('#' . basename(__FILE__) . '#', $_SERVER['PHP_SELF'])) { die('You are not allowed to call this page directly.'); }
 
 global $wpdb, $wp_version;
 
@@ -118,7 +120,7 @@ function g_popup()
 				$PPOPOUPUP_txt = $PPOPOUPUP_txt . '<div class="PopupDivBar"><a href="#">'.$txt.'</a><a href="#" onClick="PopupDivStop()" class="close">&nbsp;</a></div>';
 				$PPOPOUPUP_txt = $PPOPOUPUP_txt . '<div class="PopupDivAds"><a href="'.$link.'"><img src="'.$url.'" alt="'.$txt.'" /></a></div>';
 			$PPOPOUPUP_txt = $PPOPOUPUP_txt . '</div>';
-			$PPOPOUPUP_txt = $PPOPOUPUP_txt . '<script type="text/javascript">PopupDivFunc();</script>';
+			$PPOPOUPUP_txt = $PPOPOUPUP_txt . '<script type="text/javascript">setTimeout("PopupDivFunc();", "3000");</script>';
 			echo $PPOPOUPUP_txt;
 		}
 
@@ -129,7 +131,7 @@ function g_popup()
 				$PPOPOUPUP_txt = $PPOPOUPUP_txt . '<div class="PopupDivBar"><a href="#">'.$txt.'</a><a href="#" onClick="PopupDivStop()" class="close">&nbsp;</a></div>';
 				$PPOPOUPUP_txt = $PPOPOUPUP_txt . '<div class="PopupDivAds"><a href="'.$link.'"><img src="'.$url.'" alt="'.$txt.'" /></a></div>';
 			$PPOPOUPUP_txt = $PPOPOUPUP_txt . '</div>';
-			$PPOPOUPUP_txt = $PPOPOUPUP_txt . '<script type="text/javascript">PopupDivFunc();</script>';
+			$PPOPOUPUP_txt = $PPOPOUPUP_txt . '<script type="text/javascript">setTimeout("PopupDivFunc();", "3000");</script>';
 			echo $PPOPOUPUP_txt;
 	}
 }
@@ -158,7 +160,7 @@ function PPOPOUPUP_admin_options()
 		<div id="icon-edit" class="icon32 icon32-posts-post"><br>
 		</div>
 		<h2><?php _e('Wordpress popup plugin', 'popup'); ?></h2>
-		<h3><?php _e('Widget setting', 'popup'); ?></h3>
+		<h3><?php _e('Setting', 'popup'); ?></h3>
 		<?php
 		$PPOPOUPUP_RANDOM = get_option('PPOPOUPUP_RANDOM');
 		
@@ -251,7 +253,11 @@ function PPOPOUPUP_admin_options()
 		<input name="PPOPOUPUP_RANDOM" id="PPOPOUPUP_RANDOM" type="text" value="<?php echo $PPOPOUPUP_RANDOM; ?>" />
 		<p><?php _e('Enter YES (or) NO', 'popup'); ?></p>
 		
-		<br />
+		<label for="tag-title"><?php _e('Popup session option', 'popup'); ?></label>
+		<input name="PPOPOUPUP_SESSION" id="PPOPOUPUP_SESSION" type="text" value="<?php echo $PPOPOUPUP_SESSION; ?>" size="20" />
+		<p><?php _e('Enter YES (or) NO  (This option is to display the popup once per session)', 'popup'); ?></p>
+		
+		<h3><?php _e('Popup 1', 'popup'); ?></h3>
 		<label for="tag-title"><?php _e('Popup image 1 text (IMG1)', 'popup'); ?></label>
 		<input name="PPOPOUPUP_IMG1" id="PPOPOUPUP_IMG1" type="text" value="<?php echo $PPOPOUPUP_IMG1; ?>" size="120" />
 		<p><?php _e('What is the text you want to display in popup window. (IMG1)', 'popup'); ?></p>	
@@ -262,7 +268,7 @@ function PPOPOUPUP_admin_options()
 		<input name="PPOPOUPUP_LINK1" id="PPOPOUPUP_LINK1" type="text" value="<?php echo $PPOPOUPUP_LINK1; ?>" size="50" />
 		<p><?php _e('When someone clicks on the picture, where do you want to send them. (Enter # if you dont have any link)', 'popup'); ?></p>
 		
-		<br />
+		<h3><?php _e('Popup 2', 'popup'); ?></h3>
 		<label for="tag-title"><?php _e('Popup image 2 text (IMG2)', 'popup'); ?></label>
 		<input name="PPOPOUPUP_IMG2" id="PPOPOUPUP_IMG2" type="text" value="<?php echo $PPOPOUPUP_IMG2; ?>" size="120" />
 		<p><?php _e('What is the text you want to display in popup window.', 'popup'); ?></p>
@@ -273,7 +279,7 @@ function PPOPOUPUP_admin_options()
 		<input name="PPOPOUPUP_LINK2" id="PPOPOUPUP_LINK2" type="text" value="<?php echo $PPOPOUPUP_LINK2; ?>" size="50" />
 		<p><?php _e('When someone clicks on the picture, where do you want to send them.', 'popup'); ?></p>
 		
-		<br />
+		<h3><?php _e('Popup 3', 'popup'); ?></h3>
 		<label for="tag-title"><?php _e('Popup image 3 text (IMG3)', 'popup'); ?></label>
 		<input name="PPOPOUPUP_IMG3" id="PPOPOUPUP_IMG3" type="text" value="<?php echo $PPOPOUPUP_IMG3; ?>" size="120" />
 		<p><?php _e('What is the text you want to display in popup window.', 'popup'); ?></p>
@@ -284,7 +290,7 @@ function PPOPOUPUP_admin_options()
 		<input name="PPOPOUPUP_LINK3" id="PPOPOUPUP_LINK3" type="text" value="<?php echo $PPOPOUPUP_LINK3; ?>" size="50" />
 		<p><?php _e('When someone clicks on the picture, where do you want to send them.', 'popup'); ?></p>
 		
-		<br />
+		<h3><?php _e('Popup 4', 'popup'); ?></h3>
 		<label for="tag-title"><?php _e('Popup image 4 text (IMG4)', 'popup'); ?></label>
 		<input name="PPOPOUPUP_IMG4" id="PPOPOUPUP_IMG4" type="text" value="<?php echo $PPOPOUPUP_IMG4; ?>" size="120" />
 		<p><?php _e('What is the text you want to display in popup window.', 'popup'); ?></p>
@@ -295,7 +301,7 @@ function PPOPOUPUP_admin_options()
 		<input name="PPOPOUPUP_LINK4" id="PPOPOUPUP_LINK4" type="text" value="<?php echo $PPOPOUPUP_LINK4; ?>" size="50" />
 		<p><?php _e('When someone clicks on the picture, where do you want to send them.', 'popup'); ?></p>
 		
-		<br />
+		<h3><?php _e('Popup 5', 'popup'); ?></h3>
 		<label for="tag-title"><?php _e('Popup image 5 text (IMG5)', 'popup'); ?></label>
 		<input name="PPOPOUPUP_IMG5" id="PPOPOUPUP_IMG5" type="text" value="<?php echo $PPOPOUPUP_IMG5; ?>" size="120" />
 		<p><?php _e('What is the text you want to display in popup window.', 'popup'); ?></p>
@@ -306,21 +312,17 @@ function PPOPOUPUP_admin_options()
 		<input name="PPOPOUPUP_LINK5" id="PPOPOUPUP_LINK5" type="text" value="<?php echo $PPOPOUPUP_LINK5; ?>" size="50" />
 		<p><?php _e('When someone clicks on the picture, where do you want to send them.', 'popup'); ?></p>
 		
-		<br />
+		<h3><?php _e('Popup 6', 'popup'); ?></h3>
 		<label for="tag-title"><?php _e('Popup image 6 text (IMG6)', 'popup'); ?></label>
 		<input name="PPOPOUPUP_IMG6" id="PPOPOUPUP_IMG6" type="text" value="<?php echo $PPOPOUPUP_IMG6; ?>" size="120" />
 		<p><?php _e('What is the text you want to display in popup window.', 'popup'); ?></p>
-		<label for="tag-title"><?php _e('Popup image 5 path (i.e image URL)', 'popup'); ?></label>
+		<label for="tag-title"><?php _e('Popup image 6 path (i.e image URL)', 'popup'); ?></label>
 		<input name="PPOPOUPUP_URL6" id="PPOPOUPUP_URL6" type="text" value="<?php echo $PPOPOUPUP_URL6; ?>" size="120" />
 		<p><?php _e('Where is the picture located on the internet', 'popup'); ?></p>
-		<label for="tag-title"><?php _e('Popup image 5 link', 'popup'); ?></label>
+		<label for="tag-title"><?php _e('Popup image 6 link', 'popup'); ?></label>
 		<input name="PPOPOUPUP_LINK6" id="PPOPOUPUP_LINK6" type="text" value="<?php echo $PPOPOUPUP_LINK6; ?>" size="50" />
 		<p><?php _e('When someone clicks on the picture, where do you want to send them.', 'popup'); ?></p>
 		
-		<br />
-		<label for="tag-title"><?php _e('Popup session option', 'popup'); ?></label>
-		<input name="PPOPOUPUP_SESSION" id="PPOPOUPUP_SESSION" type="text" value="<?php echo $PPOPOUPUP_SESSION; ?>" size="20" />
-		<p><?php _e('Enter YES (or) NO  (This option is to display the popup once per session)', 'popup'); ?></p>
 		<br />
 		<input type="submit" id="PPOPOUPUP_submit" name="PPOPOUPUP_submit" lang="publish" class="button-primary" value="<?php _e('Update Setting', 'popup'); ?>" value="1" />
 		<?php wp_nonce_field('PPOPOUPUP_form_setting'); ?>
@@ -408,7 +410,7 @@ function PPOPOUPUP_shortcode( $atts )
 				$PPOPOUPUP_txt = $PPOPOUPUP_txt . '<div class="PopupDivBar"><a href="#">'.$txt.'</a><a href="#" onClick="PopupDivStop()" class="close">&nbsp;</a></div>';
 				$PPOPOUPUP_txt = $PPOPOUPUP_txt . '<div class="PopupDivAds"><a href="'.$link.'"><img src="'.$url.'" alt="'.$txt.'" /></a></div>';
 			$PPOPOUPUP_txt = $PPOPOUPUP_txt . '</div>';
-			$PPOPOUPUP_txt = $PPOPOUPUP_txt . '<script type="text/javascript">PopupDivFunc();</script>';
+			$PPOPOUPUP_txt = $PPOPOUPUP_txt . '<script type="text/javascript">setTimeout("PopupDivFunc();", "3000");</script>';
 			return $PPOPOUPUP_txt;
 		}
 
@@ -419,7 +421,7 @@ function PPOPOUPUP_shortcode( $atts )
 				$PPOPOUPUP_txt = $PPOPOUPUP_txt . '<div class="PopupDivBar"><a href="#">'.$txt.'</a><a href="#" onClick="PopupDivStop()" class="close">&nbsp;</a></div>';
 				$PPOPOUPUP_txt = $PPOPOUPUP_txt . '<div class="PopupDivAds"><a href="'.$link.'"><img src="'.$url.'" alt="'.$txt.'" /></a></div>';
 			$PPOPOUPUP_txt = $PPOPOUPUP_txt . '</div>';
-			$PPOPOUPUP_txt = $PPOPOUPUP_txt . '<script type="text/javascript">PopupDivFunc();</script>';
+			$PPOPOUPUP_txt = $PPOPOUPUP_txt . '<script type="text/javascript">setTimeout("PopupDivFunc();", "3000");</script>';
 			return $PPOPOUPUP_txt;
 	}
 }
