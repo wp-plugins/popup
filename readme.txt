@@ -6,7 +6,7 @@ Plugin URI: http://www.gopiplus.com/work/2011/01/14/wordpress-popup/
 Tags: popup, popups, unblockable
 Requires at least: 3.4
 Tested up to: 3.9
-Stable tag: 11.2
+Stable tag: 11.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	
@@ -72,6 +72,10 @@ http://www.gopiplus.com/work/2011/01/14/wordpress-popup/
 
 == Changelog ==
 
+= 11.3 =
+
+Improved admin UI.
+
 = 11.2 =
 
 1. Tested up to 3.9
@@ -133,6 +137,10 @@ First version.
 http://www.gopiplus.com/work/2011/01/14/wordpress-popup/
 
 == Upgrade Notice ==
+
+= 11.3 =
+
+Improved admin UI.
 
 = 11.2 =
 

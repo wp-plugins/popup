@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Popup wordpress plugin\n"
-"POT-Creation-Date: 2014-04-18 10:12+0800\n"
-"PO-Revision-Date: 2014-04-18 10:12+0800\n"
+"POT-Creation-Date: 2014-07-24 21:51+0800\n"
+"PO-Revision-Date: 2014-07-24 21:51+0800\n"
 "Last-Translator: \n"
 "Language-Team: www.gopiplus.com <www.gopiplus.com>\n"
 "MIME-Version: 1.0\n"
@@ -174,23 +174,27 @@ msgstr "Popup image 1 link"
 msgid "Update Setting"
 msgstr "Update Setting"
 
-#: ../popup.php:331
+#: ../popup.php:328
+msgid "Help"
+msgstr ""
+
+#: ../popup.php:332
 msgid "Plugin configuration option"
 msgstr "Plugin configuration option"
 
-#: ../popup.php:333
+#: ../popup.php:334
 msgid "Option to add the popup into particular pages and posts."
 msgstr "Option to add the popup into particular pages and posts."
 
-#: ../popup.php:334
+#: ../popup.php:335
 msgid "Option to add the popup window into all the pages in the website."
 msgstr "Option to add the popup window into all the pages in the website."
 
-#: ../popup.php:336
+#: ../popup.php:337
 msgid "Check official website for more information"
 msgstr "Check official website for more information"
 
-#: ../popup.php:337
+#: ../popup.php:338
 msgid "click here"
 msgstr "click here"
 
