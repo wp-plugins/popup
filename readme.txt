@@ -5,8 +5,8 @@ Author URI: http://www.gopiplus.com/work/2011/01/14/wordpress-popup/
 Plugin URI: http://www.gopiplus.com/work/2011/01/14/wordpress-popup/
 Tags: popup, popups, unblockable
 Requires at least: 3.4
-Tested up to: 3.9
-Stable tag: 11.3
+Tested up to: 4.0
+Stable tag: 11.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	
@@ -27,42 +27,42 @@ One easy way to send your visitors a welcome message, notice, or advertisement i
 
 This popup ads are very effective advertising tools for your website since they won’t get automatically blocked by popup blocking tool.
 
-    * Simple.
-    * Easy installation.
-    * Easy configuration.
-    * Unblockable.
-	* Once per session option.
-	* Supports localization
+* Simple.
+* Easy installation.
+* Easy configuration.
+* Unblockable.
+* Once per session option.
+* Supports localization
 	
 Detailed information about this plugin and the short code available in this link. http://www.gopiplus.com/work/2011/01/14/wordpress-popup/
 
 = To display all the image randomly =
 
-<code>[popup show="ALL"]</code>
+`[popup show="ALL"]`
 
 = To display one image only =
 
-<code>[popup show="IMG1"]</code>
+`[popup show="IMG1"]`
 	
 == Installation ==
-
-=Installation Instruction & Configuration=  
 
 [See Installation Instruction and Configuration information and Demo](http://www.gopiplus.com/work/2011/01/14/wordpress-popup/)	   
 
 == Frequently Asked Questions ==
 
-= How to arrange the width & height? =		
-= Possible to add the pop up into the particular page/post? =		
-= How to update the popup information? =		
-= How to display the message in random order? =	
-= Is possible to set the popup once per session? =	
-= Is possible to add text in the popup? =
+Q1. How to arrange the width & height?
+
+Q1. Possible to add the pop up into the particular page/post?
+	
+Q1. How to update the popup information?
+
+Q1. How to display the message in random order?
+	
+Q1. Is possible to set the popup once per session?
+	
+Q1. Is possible to add text in the popup?
 
 [Answer page](http://www.gopiplus.com/work/2011/01/14/wordpress-popup/)			
-[Contact](http://www.gopiplus.com/work/2011/01/14/wordpress-popup/)	
-
-http://www.gopiplus.com/work/2011/01/14/wordpress-popup/
 
 == Screenshots ==
 
@@ -71,6 +71,10 @@ http://www.gopiplus.com/work/2011/01/14/wordpress-popup/
 2. Admin screen : http://www.gopiplus.com/work/2011/01/14/wordpress-popup/
 
 == Changelog ==
+
+= 11.4 =
+
+1. Tested up to 4.0
 
 = 11.3 =
 
@@ -137,6 +141,10 @@ First version.
 http://www.gopiplus.com/work/2011/01/14/wordpress-popup/
 
 == Upgrade Notice ==
+
+= 11.4 =
+
+1. Tested up to 4.0
 
 = 11.3 =
 
