@@ -4,7 +4,7 @@ Plugin Name: Popup
 Plugin URI: http://www.gopiplus.com/work/2011/01/14/wordpress-popup/
 Description: One easy way to send your visitors a welcome message, notice or advertisement is to add this popup plugin to your site. 
 Author: Gopi Ramasamy
-Version: 11.6
+Version: 11.7
 Author URI: http://www.gopiplus.com/work/2011/01/14/wordpress-popup/
 Donate link: http://www.gopiplus.com/work/2011/01/14/wordpress-popup/
 License: GPLv2 or later
@@ -248,8 +248,94 @@ function PPOPOUPUP_admin_options()
 			
 		}
 		?>
+		<?php
+		wp_enqueue_script('jquery'); // jQuery
+		wp_enqueue_media(); // This will enqueue the Media Uploader script
+		?>
+		<script type="text/javascript">
+		jQuery(document).ready(function($){
+			$('#upload-btn1').click(function(e) {
+				e.preventDefault();
+				var image = wp.media({ 
+					title: 'Upload Image',
+					multiple: false
+				}).open()
+				.on('select', function(e){
+					var uploaded_image = image.state().get('selection').first();
+					console.log(uploaded_image);
+					var PPOPOUPUP_URL1 = uploaded_image.toJSON().url;
+					$('#PPOPOUPUP_URL1').val(PPOPOUPUP_URL1);
+				});
+			});
+			$('#upload-btn2').click(function(e) {
+				e.preventDefault();
+				var image = wp.media({ 
+					title: 'Upload Image',
+					multiple: false
+				}).open()
+				.on('select', function(e){
+					var uploaded_image2 = image.state().get('selection').first();
+					console.log(uploaded_image2);
+					var PPOPOUPUP_URL2 = uploaded_image2.toJSON().url;
+					$('#PPOPOUPUP_URL2').val(PPOPOUPUP_URL2);
+				});
+			});
+			$('#upload-btn3').click(function(e) {
+				e.preventDefault();
+				var image = wp.media({ 
+					title: 'Upload Image',
+					multiple: false
+				}).open()
+				.on('select', function(e){
+					var uploaded_image3 = image.state().get('selection').first();
+					console.log(uploaded_image3);
+					var PPOPOUPUP_URL3 = uploaded_image3.toJSON().url;
+					$('#PPOPOUPUP_URL3').val(PPOPOUPUP_URL3);
+				});
+			});
+			$('#upload-btn4').click(function(e) {
+				e.preventDefault();
+				var image = wp.media({ 
+					title: 'Upload Image',
+					multiple: false
+				}).open()
+				.on('select', function(e){
+					var uploaded_image4 = image.state().get('selection').first();
+					console.log(uploaded_image4);
+					var PPOPOUPUP_URL4 = uploaded_image4.toJSON().url;
+					$('#PPOPOUPUP_URL4').val(PPOPOUPUP_URL4);
+				});
+			});
+			$('#upload-btn5').click(function(e) {
+				e.preventDefault();
+				var image = wp.media({ 
+					title: 'Upload Image',
+					multiple: false
+				}).open()
+				.on('select', function(e){
+					var uploaded_image5 = image.state().get('selection').first();
+					console.log(uploaded_image5);
+					var PPOPOUPUP_URL5 = uploaded_image5.toJSON().url;
+					$('#PPOPOUPUP_URL5').val(PPOPOUPUP_URL5);
+				});
+			});
+			$('#upload-btn6').click(function(e) {
+				e.preventDefault();
+				var image = wp.media({ 
+					title: 'Upload Image',
+					multiple: false
+				}).open()
+				.on('select', function(e){
+					var uploaded_image6 = image.state().get('selection').first();
+					console.log(uploaded_image6);
+					var PPOPOUPUP_URL6 = uploaded_image6.toJSON().url;
+					$('#PPOPOUPUP_URL6').val(PPOPOUPUP_URL6);
+				});
+			});
+		});
+		</script>
 		<form name="form_PopUpFad" method="post" action="">
-		<label for="tag-title"><?php _e('Random message display', 'popup'); ?></label>
+		<label for="tag-title"><?php _e('Random popup display', 'popup'); ?></label>
 		<input name="PPOPOUPUP_RANDOM" id="PPOPOUPUP_RANDOM" type="text" value="<?php echo $PPOPOUPUP_RANDOM; ?>" />
 		<p><?php _e('Enter YES (or) NO', 'popup'); ?></p>
 		
@@ -263,6 +349,7 @@ function PPOPOUPUP_admin_options()
 		<p><?php _e('What is the text you want to display in popup window. (IMG1)', 'popup'); ?></p>	
 		<label for="tag-title"><?php _e('Popup image 1 path (i.e image URL)', 'popup'); ?></label>
 		<input name="PPOPOUPUP_URL1" id="PPOPOUPUP_URL1" type="text" value="<?php echo $PPOPOUPUP_URL1; ?>" size="80" />
+		<input type="button" name="upload-btn1" id="upload-btn1" class="button-secondary" value="Upload Image">
 		<p><?php _e('Where is the picture located on the internet', 'popup'); ?> (Example: http://www.gopiplus.com/work/wp-content/uploads/sample.jpg)</p>
 		<label for="tag-title"><?php _e('Popup image 1 link', 'popup'); ?></label>
 		<input name="PPOPOUPUP_LINK1" id="PPOPOUPUP_LINK1" type="text" value="<?php echo $PPOPOUPUP_LINK1; ?>" size="50" />
@@ -274,6 +361,7 @@ function PPOPOUPUP_admin_options()
 		<p><?php _e('What is the text you want to display in popup window.', 'popup'); ?></p>
 		<label for="tag-title"><?php _e('Popup image 2 path (i.e image URL)', 'popup'); ?></label>
 		<input name="PPOPOUPUP_URL2" id="PPOPOUPUP_URL2" type="text" value="<?php echo $PPOPOUPUP_URL2; ?>" size="80" />
+		<input type="button" name="upload-btn2" id="upload-btn2" class="button-secondary" value="Upload Image">
 		<p><?php _e('Where is the picture located on the internet', 'popup'); ?></p>
 		<label for="tag-title"><?php _e('Popup image 2 link', 'popup'); ?></label>
 		<input name="PPOPOUPUP_LINK2" id="PPOPOUPUP_LINK2" type="text" value="<?php echo $PPOPOUPUP_LINK2; ?>" size="50" />
@@ -285,6 +373,7 @@ function PPOPOUPUP_admin_options()
 		<p><?php _e('What is the text you want to display in popup window.', 'popup'); ?></p>
 		<label for="tag-title"><?php _e('Popup image 3 path (i.e image URL)', 'popup'); ?></label>
 		<input name="PPOPOUPUP_URL3" id="PPOPOUPUP_URL3" type="text" value="<?php echo $PPOPOUPUP_URL3; ?>" size="80" />
+		<input type="button" name="upload-btn3" id="upload-btn3" class="button-secondary" value="Upload Image">
 		<p><?php _e('Where is the picture located on the internet', 'popup'); ?></p>
 		<label for="tag-title"><?php _e('Popup image 3 link', 'popup'); ?></label>
 		<input name="PPOPOUPUP_LINK3" id="PPOPOUPUP_LINK3" type="text" value="<?php echo $PPOPOUPUP_LINK3; ?>" size="50" />
@@ -296,6 +385,7 @@ function PPOPOUPUP_admin_options()
 		<p><?php _e('What is the text you want to display in popup window.', 'popup'); ?></p>
 		<label for="tag-title"><?php _e('Popup image 4 path (i.e image URL)', 'popup'); ?></label>
 		<input name="PPOPOUPUP_URL4" id="PPOPOUPUP_URL4" type="text" value="<?php echo $PPOPOUPUP_URL4; ?>" size="80" />
+		<input type="button" name="upload-btn4" id="upload-btn4" class="button-secondary" value="Upload Image">
 		<p><?php _e('Where is the picture located on the internet', 'popup'); ?></p>
 		<label for="tag-title"><?php _e('Popup image 4 link', 'popup'); ?></label>
 		<input name="PPOPOUPUP_LINK4" id="PPOPOUPUP_LINK4" type="text" value="<?php echo $PPOPOUPUP_LINK4; ?>" size="50" />
@@ -307,6 +397,7 @@ function PPOPOUPUP_admin_options()
 		<p><?php _e('What is the text you want to display in popup window.', 'popup'); ?></p>
 		<label for="tag-title"><?php _e('Popup image 5 path (i.e image URL)', 'popup'); ?></label>
 		<input name="PPOPOUPUP_URL5" id="PPOPOUPUP_URL5" type="text" value="<?php echo $PPOPOUPUP_URL5; ?>" size="80" />
+		<input type="button" name="upload-btn5" id="upload-btn5" class="button-secondary" value="Upload Image">
 		<p><?php _e('Where is the picture located on the internet', 'popup'); ?></p>
 		<label for="tag-title"><?php _e('Popup image 5 link', 'popup'); ?></label>
 		<input name="PPOPOUPUP_LINK5" id="PPOPOUPUP_LINK5" type="text" value="<?php echo $PPOPOUPUP_LINK5; ?>" size="50" />
@@ -318,6 +409,7 @@ function PPOPOUPUP_admin_options()
 		<p><?php _e('What is the text you want to display in popup window.', 'popup'); ?></p>
 		<label for="tag-title"><?php _e('Popup image 6 path (i.e image URL)', 'popup'); ?></label>
 		<input name="PPOPOUPUP_URL6" id="PPOPOUPUP_URL6" type="text" value="<?php echo $PPOPOUPUP_URL6; ?>" size="80" />
+		<input type="button" name="upload-btn6" id="upload-btn6" class="button-secondary" value="Upload Image">
 		<p><?php _e('Where is the picture located on the internet', 'popup'); ?></p>
 		<label for="tag-title"><?php _e('Popup image 6 link', 'popup'); ?></label>
 		<input name="PPOPOUPUP_LINK6" id="PPOPOUPUP_LINK6" type="text" value="<?php echo $PPOPOUPUP_LINK6; ?>" size="50" />
