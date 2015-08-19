@@ -5,8 +5,8 @@ Author URI: http://www.gopiplus.com/work/2011/01/14/wordpress-popup/
 Plugin URI: http://www.gopiplus.com/work/2011/01/14/wordpress-popup/
 Tags: popup, popups, unblockable
 Requires at least: 3.4
-Tested up to: 4.2.2
-Stable tag: 11.7
+Tested up to: 4.3
+Stable tag: 11.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	
@@ -71,6 +71,10 @@ Q1. Is possible to add text in the popup?
 2. Admin screen : http://www.gopiplus.com/work/2011/01/14/wordpress-popup/
 
 == Changelog ==
+
+= 11.8 =
+
+1. Tested up to 4.3
 
 = 11.7 =
 
@@ -153,6 +157,10 @@ First version.
 http://www.gopiplus.com/work/2011/01/14/wordpress-popup/
 
 == Upgrade Notice ==
+
+= 11.8 =
+
+1. Tested up to 4.3
 
 = 11.7 =
 
